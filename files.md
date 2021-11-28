@@ -11,7 +11,7 @@
 ### Read a file
 ### In Python 3, If files do not open in binary mode, the encoding will be determined by ```locale.getpreferredencoding(False)``` or user's input.
 ```python
->>> with open("/etc/hosts", encoding="utf-8") as f:
+>>> with open("/etc/hosts") as f:
 ...     content = f.read()
 ...
 >>> print(type(content))
@@ -25,18 +25,6 @@
 ...
 >>> print(type(content))
 <class 'bytes'>
-```
-
-
-#### In python2
-```python
-## The content of the file is a byte string, not a Unicode string.
->>> with open("/etc/passwd") as f:
-...    content = f.read()
->>> print(type(content))
-<type 'str'>
->>> print(type(content.decode("utf-8")))
-<type 'unicode'>
 ```
 
 

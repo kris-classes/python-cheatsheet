@@ -7,6 +7,12 @@
 - [Move File](#move-a-file)
 - [Readline](#readline)
 
+### open a file without using `with` keyword
+```python
+f = open("passwords.txt")
+lines = f.readlines()
+f.close()
+```
 <br><br>
 ### Read a file
 ### In Python 3, If files do not open in binary mode, the encoding will be determined by ```locale.getpreferredencoding(False)``` or user's input.
